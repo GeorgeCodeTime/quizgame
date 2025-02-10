@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>Quiz Game</title>
+</head>
+
+<body>
+
+    <div class="otherButtons">
+        <img src="sound-on.png" alt="" onclick="toggleMusic(false)">
+        <img src="mute.png" alt="" onclick="toggleMusic(true)">
+        <img src="information-button.png" title="Raspuns corect: +300pct&#10;Raspuns gresit: -100pct" alt="">
+    </div>
+
+    <div class="quizContent">
+
+        <div id="timerContent" class="timerContent" style="overflow: hidden;">
+            <p id="timerText" style="text-shadow: 3px 3px 5px #f6d8d5;"></p>
+        </div>
+
+        <div id="endGame" class="endGame">
+            <div id="endGameBlur" class="endGameBlur">
+                <div>
+                    <p id="endGameBlurContent" style="margin: 0;"></p>
+                    <p id="lastScore" style="margin: 0;"></p>
+                </div>
+                <button class="button-53" onclick="playAgain()">Joaca din nou</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay" style="overflow: hidden;">
+            <h1 data-text="Alege domeniul intrebarilor" id="gameTitle">Alege domeniul intrebarilor</h1>
+            <h2 id="questionTitle" style="display: none;text-align: center;color: #f6d8d5;"></h2>
+            <div class="categoryContent">
+                <div class="buttons" id="buttons">
+                    <button id="sportButton" onclick="timerCounter('Jocul incepe in...', 5,sportQuestions, '#f6d8d5')">S P O R T</button>
+                    <button id="geographyButton" onclick="timerCounter('Jocul incepe in...', 5, geographyQuestions, '#f6d8d5')">G E O G R A F I E</button>
+                    <button onclick="timerCounter('Jocul incepe in...', 5, MathQuestions, '#f6d8d5')">M A T E M A T I C A</button>
+                    <button onclick="timerCounter('Jocul incepe in...', 5, historyQuestions, '#f6d8d5')">I S T O R I E</button>
+                </div>
+
+                
+
+                <div class="questions" id="questions" style="display: none; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;">
+                    
+                    <div class="infos">
+                        <div id="totalScore"></div>
+                        <div class="questionNumber" id="questionNumber"></div>
+                    </div>
+
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div> 
+
+                    <div class="questionButtons" id="questionButtons">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
