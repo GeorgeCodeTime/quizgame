@@ -1,32 +1,3 @@
-// window.addEventListener("load", function () {
-//     let audio = new Audio("bgmusic.mp3");
-//     audio.loop = true;
-//     audio.volume = 0.25;
-
-//     // Încearcă să redea muzica automat la încărcarea paginii
-//     audio.play().catch(error => {
-//         console.log("Autoplay blocat de browser. Aștept interacțiunea utilizatorului.");
-
-//         // Creează un buton pentru a permite utilizatorului să pornească muzica
-//         let startButton = document.createElement('button');
-//         startButton.textContent = "Play Music";
-//         startButton.style.position = "absolute";
-//         startButton.style.top = "50%";
-//         startButton.style.left = "50%";
-//         startButton.style.transform = "translate(-50%, -50%)";
-//         document.body.appendChild(startButton);
-
-//         // La apăsarea butonului, redă muzica
-//         startButton.addEventListener("click", function () {
-//             audio.play().then(() => {
-//                 startButton.style.display = 'none'; // Ascunde butonul după ce se apasă
-//             }).catch(error => {
-//                 console.log("Eroare la redarea muzicii: ", error);
-//             });
-//         });
-//     });
-// });
-
 let audio = new Audio("bgmusic.mp3");
 audio.loop = true;
 audio.volume = 0.25;
